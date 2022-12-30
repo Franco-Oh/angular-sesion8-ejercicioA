@@ -2,13 +2,15 @@
   <h1>Login</h1>
   <div>
     <label for="">Usuario:</label>
-    <input type="text">
+    <input type="text" #usuario1>
+    <ng-template #incorrecto1><p>Credenciales incorrectas.</p></ng-template>
   </div>
   <div>
     <label for="">Password:</label>
-    <input type="text">
+    <input type="text" #password1>
+    <ng-template #incorrecto2><p>Credenciales incorrectas.</p></ng-template>
   </div>
   <div>
-    <button class="btn btn-info">LOGIN</button>
+    <button class="btn btn-outline-info" (click)="getInputValue(usuario1.value, password1.value)">LOGIN</button>
   </div>
 </div>
